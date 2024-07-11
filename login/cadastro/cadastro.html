@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/cadastro.css" />
+    <title>Cadastro</title>
+  </head>
+  <body>
+    <div class="logo">
+      <a href="../index.html"><img src="../img/logo.svg" alt="" /></a>
+    </div>
+    <main>
+      <form class="cadastro">
+        <h2>Cadastro</h2>
+        <div class="container">
+          <div class="row">
+            <label for="">Nome</label>
+            <input
+              type="text"
+              name="name"
+              id=""
+              class="inputs required"
+              oninput="(nameValidate())"
+            />
+            <span class="span-required"
+              >Nome deve ter no mínimo 3 caracteres</span
+            >
+          </div>
+
+          <div class="row">
+            <label for="mail">E-mail</label>
+            <input
+              type="email"
+              class="inputs required"
+              oninput="(emailValidate())"
+            />
+            <span class="span-required">Digite um email válido</span>
+          </div>
+
+          <div class="row">
+            <label for="">Telefone</label>
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder="+xx (xx) xxxxx-xxxx "
+              class="inputs required"
+              oninput="(numberValidate())"
+              maxlength="19"
+            />
+            <span class="span-required"
+              >Digite um número de telefone válido ex.: +99 (99) 9999-9999</span
+            >
+          </div>
+
+          <div class="row">
+            <label for="">Senha</label>
+            <div class="icon-align">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="inputs required"
+                oninput="(mainPasswordValidate())"
+              />
+              <img
+                id="icon"
+                onclick="mostrarOcultarSenha()"
+                src="../img/show.svg"
+                alt=""
+              />
+            </div>
+            <!-- <div id="icon" onclick="mostrarOcultarSenha()">teste</div>-->
+
+            <span class="span-required"
+              >Digite uma senha com no mínimo 8 caracteres</span
+            >
+          </div>
+          <!--   <button type="button" onclick="mostrarOcultarSenha()">mostrar senha</button>-->
+
+          <div class="row">
+            <label for="">Repita a sua Senha</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="inputs required"
+              oninput="(confirmationPasswordValidate())"
+            />
+            <span class="span-required">Suas senhas devem ser compatíveis</span>
+          </div>
+
+          <button class="botao-confirmar" type="submit">Enviar</button>
+
+          <a href="../index.html" class="botao-voltar">Voltar</a>
+        </div>
+      </form>
+    </main>
+  </body>
+  <script src="../script/cadastro.js"></script>
+  <script src="../script/showHide.js"></script>
+</html>

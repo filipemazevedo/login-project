@@ -5,9 +5,9 @@ const icon = document.getElementById("icon");
 function mostrarOcultarSenha() {
     if (password.type == "password") {
       password.type = "text";
-      icon.src = '/login/img/hide.svg';
+      icon.src = '../img/hide.svg';
     } else {
       password.type = "password";
-      icon.src = '/login/img/show.svg';
+      icon.src = '../img/show.svg';
     }
   }

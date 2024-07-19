@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,9 +29,11 @@
           </div>
 
           <div class="row">
+
             <label for="mail">E-mail</label>
             <input
               type="email"
+              id="email"
               class="inputs required"
               oninput="(emailValidate())"
             />
@@ -91,7 +93,7 @@
             <span class="span-required">Suas senhas devem ser compatíveis</span>
           </div>
 
-          <button class="botao-confirmar" type="submit">Enviar</button>
+          <button class="botao-confirmar" type="submit" onclick="cadastrar()">Enviar</button>
 
           <a href="../index.html" class="botao-voltar">Voltar</a>
         </div>

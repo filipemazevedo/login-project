@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,17 +12,18 @@
         <a href="./index.html"><img src="./img/logo.svg" alt="" /></a>
       </div>
       <h1>Entrar</h1>
-
+      <form id="login">
       <p for="">Login</p>
-      <input type="email" placeholder="seuemail@gmail.com" required />
+      <input type="email" id="email" placeholder="seuemail@gmail.com" required />
 
       <div class="icon-align">
         <p for="">Senha</p>
         <input
           type="password"
           name="password"
-          placeholder="********"
           id="password"
+          placeholder="********"
+        src="./acesso-restrito/acesso.html"
           required
         />
         <img
@@ -32,12 +33,15 @@
           alt=""
         />
       </div>
+    </form>
+
       <div class="recuperar">
         <p>Esqueceu a senha?</p>
         <a href="./">Clique aqui!</a>
       </div>
 
-      <a href="./" class="botao-confirmar">Fazer login</a>
+      <button type="button" onclick="logar()" class="botao-confirmar">Fazer login</button>
+  
 
       <span class="cadastro"
         ><p>
@@ -47,5 +51,5 @@
     </div>
   </body>
   <script src="./script/showHide.js"></script>
-
+  <script src="./script/login.js"></script>
 </html>
